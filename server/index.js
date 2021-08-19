@@ -8,7 +8,7 @@ let taboo
 console.log('Starting local server...')
 fastify.register(ws)
 
-const staticRoot = path.join(__dirname, '..', 'website', 'build')
+const staticRoot = path.join(__dirname, '..', 'webui', 'build')
 fastify.register(fastifyStatic, { root: staticRoot })
 
 fastify.get('/torrents', { websocket: true }, (conn) => {
