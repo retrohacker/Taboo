@@ -14,11 +14,15 @@ export default class Page extends React.PureComponent {
 
   render () {
     const { torrents } = this.props
-    const { selected } = this.state
+    let { selected } = this.state
+    selected = selected || torrents.get(0)
     const event = (selected) => this.setState({ selected })
+    console.log(torrents.size)
     return (
       <div className='Page'>
-        <Navbar />
+        <div className='Page_Navbar'>
+          <Navbar />
+        </div>
         <div className='Page_Coffee'>
           <img alt='coffee' className='Page_CoffeeIcon' src={coffee} />
           <div className='Page_CoffeeText'>
@@ -27,13 +31,16 @@ export default class Page extends React.PureComponent {
         </div>
         {
             torrents.size > 0 &&
-              <div className='Page_Torrents'>
-                <div className='Page_TorrentList'>
-                  <TorrentList torrents={torrents} onClick={event} />
-                </div>
-                {selected && <div className='Page_FileList'><FileList {...selected} /></div>}
+              <div className='Page_TorrentList'>
+                <TorrentList torrents={torrents} onClick={event} />
               </div>
         }
+        {selected &&
+          <div className='Page_FileList'>
+            <div className='Page_FileListTitle'>{selected.name}</div>
+            <div className='Page_FileListCount'>Files: {selected.files.size}</div>
+            <FileList {...selected} />
+          </div>}
         {
             torrents.size === 0 &&
               <div className='Page_Loading'>

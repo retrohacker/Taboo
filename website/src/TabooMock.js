@@ -1,5 +1,7 @@
 const chance = require('chance')()
 const EventEmitter = require('events')
+const { List } = require('immutable')
+
 class Taboo extends EventEmitter {
   constructor (...opts) {
     super(...opts)
@@ -32,13 +34,13 @@ class Taboo extends EventEmitter {
   mockArray () {
     const count = chance.integer({ min: 10, max: 20 })
     const result = new Array(count)
-    return result
+    return List(result
       .fill(0)
-      .map(this.mockTorrent)
+      .map(this.mockTorrent))
   }
 
   torrents () {
-    this.TorrentTable.values()
+    return this.TorrentTable.values()
   }
 }
 

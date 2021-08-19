@@ -1,31 +1,41 @@
 .Page {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 1fr;
+}
+.Page_Navbar {
+    grid-column: 1 / -1;
 }
 .Page_Coffee {
+    grid-column: 1 / -1;
     display: flex;
-    width: 25%;
-    min-width: 500px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     padding: 10px;
     border-radius: 20px;
     background-color: #EEEEEE;
+    max-width: 500px;
 }
 .Page_CoffeeIcon {
     height: 60px;
     margin-right: 10px;
 }
-.Page_Torrents {
-    display: flex;
+.Page_TorrentList {
+    overflow-x: clip;
+    overflow-y: scroll;
+    height: 1;
+}
+.Page_FileList {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    padding: 10px;
+}
+.Page_FileListTitle {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .Page_TorrentList .TorrentList_Entry {
     border-bottom: solid 1px black;
-}
-.Page_FileList {
-    margin-left: 10px;
-    width: 50%;
 }
 .Page_Loading {
     margin: auto;
@@ -33,6 +43,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    grid-column: 1 / -1;
 }
 .Page_LoadingText {
     margin-top: 10px;

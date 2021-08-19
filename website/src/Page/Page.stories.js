@@ -1,5 +1,6 @@
 import PageComponent from './Page'
 import TabooMock from '../TabooMock.js'
+const { List } = require('immutable')
 
 export default {
   component: PageComponent,
@@ -15,5 +16,5 @@ Page.args = {
 
 export const Empty = Template.bind({})
 Empty.args = {
-  torrents: []
+  torrents: List([])
 }

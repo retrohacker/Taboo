@@ -3,9 +3,10 @@ import './TorrentList.css'
 import TorrentEntry from '../TorrentEntry/TorrentEntry.js'
 
 function TorrentListEntry (torrent, self) {
+  const { infoHash } = torrent
   const event = self._clicked.bind(self, torrent)
   return (
-    <div className='TorrentList_Entry' onClick={event}>
+    <div key={infoHash} className='TorrentList_Entry' onClick={event}>
       <TorrentEntry {...torrent} />
     </div>
   )
