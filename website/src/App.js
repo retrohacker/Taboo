@@ -1,3 +1,4 @@
+/* global WebSocket */
 import React from 'react'
 import Page from './Page/Page.js'
 import './App.css'
