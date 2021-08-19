@@ -18,4 +18,5 @@
 
 .TorrentEntry_Title {
     font-weight: bold;
+    overflow-wrap: anywhere;
 }

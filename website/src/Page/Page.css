@@ -29,8 +29,11 @@
     display: grid;
     grid-template-rows: auto auto 1fr;
     padding: 10px;
+    overflow: clip;
+    overflow-wrap: anywhere;
 }
 .Page_FileListTitle {
+    overflow: clip;
     font-weight: bold;
     margin-bottom: 10px;
 }
