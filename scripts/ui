@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -ex
+
+[ ! -d ./lib/node_modules ] && cd ./lib && npm install && cd ../
+[ ! -d ./webui/node_modules ] && cd ./webui && npm install && cd ../
+[ ! -d ./webui/build ] && cd ./webui && npm run build && cd ../
+[ ! -d ./electron/node_modules ] && cd ./electron && npm install && cd ../
+[ ! -d ./electron/TabooLib ] && cp -r ./lib ./electron/TabooLib
+[ ! -d ./electron/TabooUI ] && cp -r ./webui/src ./electron/TabooUI
+
+cd electron
+npm run start

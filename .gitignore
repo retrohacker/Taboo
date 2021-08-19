@@ -15,3 +15,6 @@ yarn-debug.log*
 yarn-error.log*
 
 node.core
+
+electron/TabooLib
+electron/TabooUI

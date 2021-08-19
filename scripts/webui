@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -ex
+
+[ ! -d ./lib/node_modules ] && cd ./lib && npm install && cd ../
+[ ! -d ./webui/node_modules ] && cd ./webui && npm install && cd ../
+[ ! -d ./server/node_modules ] && cd ./server && npm install && cd ../
+[ ! -d ./webui/build ] && cd ./webui && npm run build && cd ../
+node server/index.js
