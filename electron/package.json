@@ -1,0 +1,9 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "electron --no-sandbox ."
+  },
+  "devDependencies": {
+    "electron": "^13.2.1"
+  }
+}

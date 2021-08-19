@@ -1,8 +1,14 @@
 {
   "scripts": {
-    "lint": "standard --fix"
+    "lint": "standard --fix",
+    "webui": "scripty",
+    "storybook": "scripty",
+    "ui": "scripty"
   },
   "devDependencies": {
     "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "scripty": "^2.0.0"
   }
 }
