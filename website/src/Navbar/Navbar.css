@@ -1,0 +1,17 @@
+.Navbar {
+    min-height: 40px;
+    background-color: #39A2DB;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.Navbar_Logo {
+    height: 40px;
+    padding-right: 10px;
+}
+
+.Navbar_Title {
+    color: white;
+    font-weight: bold;
+}

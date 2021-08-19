@@ -1,0 +1,21 @@
+.TorrentEntry {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.TorrentEntry:hover {
+    background-color: #EEEEEE;
+}
+
+.TorrentEntry_Logo {
+    height: 40px;
+    padding-right: 10px;
+}
+
+.TorrentEntry_Title {
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+.Page {
+    display: flex;
+    flex-direction: column;
+}
+.Page_Coffee {
+    display: flex;
+    width: 25%;
+    min-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #EEEEEE;
+}
+.Page_CoffeeIcon {
+    height: 60px;
+    margin-right: 10px;
+}
+.Page_Torrents {
+    display: flex;
+}
+.Page_TorrentList .TorrentList_Entry {
+    border-bottom: solid 1px black;
+}
+.Page_FileList {
+    margin-left: 10px;
+    width: 50%;
+}
+.Page_Loading {
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Page_LoadingText {
+    margin-top: 10px;
+    font-weight: bold;
+}
