@@ -1,19 +1,32 @@
 {
   "main": "index.js",
+  "name": "Taboo",
+  "description": "See what's on the BitTorrent DHT",
+  "version": "1.0.0",
   "homepage": "./",
   "scripts": {
-    "start": "electron --no-sandbox .",
-    "build": "react-scripts build"
+    "start": "electron-forge start",
+    "build": "react-scripts build",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "immutable": "^4.0.0-rc.14",
     "parse-torrent": "^9.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "react-scripts": "4.0.3",
-    "electron": "^13.2.1"
+    "@electron-forge/cli": "^6.0.0-beta.59",
+    "@electron-forge/maker-deb": "^6.0.0-beta.59",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.59",
+    "@electron-forge/maker-pkg": "^6.0.0-beta.59",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.59",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
+    "@electron-forge/maker-zip": "^6.0.0-beta.59",
+    "electron": "^13.2.1",
+    "react-scripts": "4.0.3"
   },
   "browserslist": {
     "production": [
@@ -26,5 +39,40 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": ""
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-pkg",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        }
+      ]
+    }
   }
 }
