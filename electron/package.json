@@ -1,9 +1,30 @@
 {
   "main": "index.js",
+  "homepage": "./",
   "scripts": {
-    "start": "electron --no-sandbox ."
+    "start": "electron --no-sandbox .",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "immutable": "^4.0.0-rc.14",
+    "parse-torrent": "^9.1.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "react-scripts": "4.0.3",
     "electron": "^13.2.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

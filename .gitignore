@@ -17,4 +17,5 @@ yarn-error.log*
 node.core
 
 electron/TabooLib
-electron/TabooUI
+electron/src/TabooUI
+electron/public
