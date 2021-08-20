@@ -2,6 +2,7 @@
 import React from 'react'
 import Page from './TabooUI/Page/Page.js'
 import { List } from 'immutable'
+import './App.css'
 const Taboo = window.require('TabooLib')
 let taboo
 
